@@ -10,6 +10,13 @@ public class MainActivity extends AppCompatActivity {
     int scoreA = 0;
     int scoreB = 0;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
     public void threePointsA(View view){
         scoreA += 3;
         displayTeamA(scoreA);
@@ -48,14 +55,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-    }
 
     public void displayTeamA(int score){
         TextView scoreView = findViewById(R.id.scoreA);
